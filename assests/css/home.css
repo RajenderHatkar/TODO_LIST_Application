@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    background-color: bisque;
+    text-align: center;
+    font-size: medium;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+/*descripton style*/
+.desc{
+    text-align: left;
+    position: relative;
+    left: 10%;
+}
+.desc input{
+    background-color: rgb(163, 189, 180);
+    width: 80%;margin: 10px;
+    padding: 15px 0;
+    font-size: 13pt;
+    border-style: outset;
+    text-align: center;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+}
+.desc p{
+    position: relative;
+    color: brown;
+    top: 24px;
+    left: 21px;
+}
+/*Add task and Date style*/
+.select_and_input{
+    display: block;
+    position: relative;
+    width: 96%;
+    left:2%;
+}
+.select_and_input select{
+    width: 40%;
+    padding: 10px 0;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.select_and_input input{
+    width: 40%;
+    padding: 10px 0;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+}
+ select option{
+    background-color: rgb(222, 223, 140);
+    color: rgb(234, 137, 20);
+    font-size: medium;
+}
+.Add-Task{
+    width: 20%;
+    padding: 10px 0;
+    margin: 10px;
+    border-radius: 10px;
+    border-style: dotted;
+    background-color: rgb(138, 143, 131);
+
+}
+.Add-Task:hover{
+    background-color: rgb(213, 94, 19);
+    border: none;
+    border-radius: 20px;
+
+}
+.del-button{
+    width: 20%;
+    padding: 10px 0;
+    margin: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(220, 19, 19);
+
+}
+.del-button:hover{
+    
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(184, 92, 92);
+
+}
+/*added Task styling*/
+.singleTask{
+    display: flex;
+    width: 90%;
+    position: relative;
+    background-color: azure;
+    margin: 10px;
+    left: 2%;
+    border-radius: 14px;
+}
+.singleTask .delecheck{
+    width: 1.5%;
+    position: relative;
+    left: 2.5%;
+}
+.name_and_dueDate{
+    width: 80%;
+    position: relative;
+    left: 5%;
+    text-align: left;
+}
+.catesec{
+    justify-content: center;
+    display: flex;
+    width: 18%;
+    position: relative;
+    border: 1px solid black;
+    /*background-color: rgb(173, 115, 115);*/
+    background-color: rgb(115, 114, 211);
+    align-items: center;
+
+}
+.commonClass{
+    
+    text-align: center;
+    padding: 5px;
+    border-radius: 15px;    
+    color: white;
+    transition: transform 0.3s;
+}
+/* Design for different category */
+.work{
+    background-color:rgb(98, 44, 64);
+        
+}
+.Personal{
+    background-color: rgb(218, 107, 181);
+
+}
+.Claeaning{
+    background-color: rgb(219, 230, 65);
+}
+.Others{
+    background-color: rgb(227, 89, 9);
+}

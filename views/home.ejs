@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <script src="https://kit.fontawesome.com/6288969100.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+    <h1><i class="fa-regular fa-rectangle-list"></i><span> </span>To DO LIST App</h1>
+    <form action="/create_TO_Do_LIST" method="POST">
+        <div  class="desc" id="desc-id">
+            <p>Description</p>
+            <input type="text" name="description" placeholder="write your to do activity here!!!" required> 
+        </div>
+         <!--Categories and date buttons-->
+        <div class="select_and_input">
+            <select name="category" required>
+                <option value="" disabled selected>Select your category</option>
+                <option>Personal</option>
+                <option>Work</option>
+                <option>Cleaning</option>
+                <option>Others</option>
+            </select>
+            <!--<div class="date">
+                <p>Due Date</p>
+              <input class="dateVal" id="due-date" type="date" name="date" placeholder="Due data dd/mm/yyyy" required>
+            </div>-->
+            <input class="dateVal" id="due-date" type="date" name="date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Due Date" required>
+            
+        </div>
+        <button class="Add-Task" id="submitButton" type="submit">Add Task</button>
+        <button class="del-button" id="deleteButton" type="submit">Delete Task</button>
+
+       
+        
+    </form>
+    <!--List of todo's-->
+    <form action="" >
+        <!--<button type="submit" class="del-button" id="deleteButton" value="DELETE TASK">Delete</button>-->
+        <% todoList.forEach((i)=> { %>
+            <div class="singleTask">
+                <input type="checkbox" class="delecheck" name="check" value="<%= i._id %>" >
+                <label>
+                    <%= todoList.name %>
+                </label>
+                <div class="name_and_dueDate">
+                    <p id=<%=i._id %> value = <%= i._id %> class="dispdsc"><%= i.description %>
+                    </p>
+                    <p id=<%=i._id + i.date %> class="dueDate" >Due Date: <%= i.date %>
+                    </p>
+                </div>
+                <div class="catesec">
+                    <%= i.category %>
+                </div>
+            </div>
+        <% }) %>
+    </form>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/js/scripts.js"></script>
+
+</body>
+</html>
